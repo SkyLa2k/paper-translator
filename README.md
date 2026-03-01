@@ -118,6 +118,17 @@ paper-translator/
 **Q: 翻译结果不满意？**
 > 可以在 `config.yaml` 调整 `temperature` 参数，较低值更精确，较高值更有创造性。
 
+**Q: 运行脚本报错怎么办？**
+> 如果 bat 脚本显示乱码，请尝试：
+> 1. 确保使用 Git Bash 或 PowerShell 运行
+> 2. 或者手动运行以下命令：
+> ```bash
+> python -m venv venv
+> venv\Scripts\pip install -r requirements.txt
+> copy config\config.yaml.example config\config.yaml
+> venv\Scripts\python main.py
+> ```
+
 ## 📄 许可证
 
 MIT License — 自由使用、修改和分发。

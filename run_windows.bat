@@ -6,7 +6,7 @@ REM Activate virtual environment
 if exist "venv\Scripts\activate.bat" (
     call venv\Scripts\activate.bat
 ) else (
-    echo [错误] 未找到虚拟环境，请先运行 install_windows.bat
+    echo [ERROR] Virtual environment not found. Please run install_windows.bat first.
     pause
     exit /b 1
 )
