@@ -9,7 +9,7 @@ from PySide6.QtWidgets import (
     QStatusBar, QScrollArea, QFrame, QTextEdit, QSlider, QCheckBox,
     QComboBox, QGroupBox, QProgressBar, QToolBar, QDockWidget,
     QListWidget, QListWidgetItem, QTreeWidget, QTreeWidgetItem,
-    QApplication
+    QApplication, QSizePolicy
 )
 from PySide6.QtCore import Qt, QTimer, QSize, QPropertyAnimation, QEasingCurve, Signal, QMimeData
 from PySide6.QtGui import QAction, QFont, QColor, QPalette, QDropEvent, QDragEnterEvent, QIcon, QKeySequence
