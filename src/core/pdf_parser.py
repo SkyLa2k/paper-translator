@@ -151,4 +151,4 @@ class PDFParser:
 
 
 # For backwards compatibility
-from .config_loader import config
+from ..utils.config_loader import config

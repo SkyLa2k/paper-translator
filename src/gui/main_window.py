@@ -543,12 +543,15 @@ class MainWindow(QMainWindow):
         toolbar.addSeparator()
         
         # Back to drop zone
-        self.back_btn = QPushButton("← 返回")
+        self.back_btn = QPushButton("← Back")
         self.back_btn.clicked.connect(self._show_drop_zone)
         self.back_btn.setVisible(False)
         toolbar.addWidget(self.back_btn)
         
-        toolbar.addStretch()
+        # Spacer to push settings to right
+        spacer = QWidget()
+        spacer.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Expanding)
+        toolbar.addWidget(spacer)
         
         # Settings button
         settings_btn = QPushButton("⚙️ 设置")
