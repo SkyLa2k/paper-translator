@@ -1,0 +1,53 @@
+# Paper Translator Configuration
+# 复制此文件为 config.yaml 并填入你的 API Key
+
+translator:
+  # 主翻译引擎：gemini 或 google
+  primary: gemini
+  # 备用翻译引擎
+  fallback: google
+
+  # Google Gemini 配置
+  gemini:
+    # 在此填入你的 Google AI Studio API Key
+    # 申请地址: https://aistudio.google.com/app/apikey
+    api_key: "YOUR_GEMINI_API_KEY_HERE"
+    model: "gemini-2.5-flash-preview-0520"
+    # 温度参数 (0.0-1.0)
+    temperature: 0.3
+
+  # Google Translate 配置 (免费降级方案)
+  google:
+    # 免费，无需 Key
+    enabled: true
+
+# PDF 解析设置
+pdf:
+  # 是否翻译目录
+  translate_toc: false
+  # 是否翻译图表标题
+  translate_figure_captions: true
+  # 是否翻译表格内容
+  translate_tables: true
+  # 是否跳过参考文献 section
+  skip_references: true
+  # 图像处理：keep(保留原图) / add_caption(添加中文图注)
+  image_mode: add_caption
+
+# 界面设置
+ui:
+  # 主题：light / dark / system
+  theme: system
+  # 默认分割比例 (原文:译文)
+  split_ratio: 0.5
+  # 启用滚动同步
+  sync_scroll: true
+  # 字体大小
+  font_size: 14
+
+# 缓存设置
+cache:
+  # 翻译缓存目录
+  dir: "cache"
+  # 启用缓存
+  enabled: true
